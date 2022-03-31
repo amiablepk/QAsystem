@@ -1,0 +1,104 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: QAsystem - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Saket\LOCALS~1\Temp\RSPD.bat" with contents
+[
+@echo off
+start /wait hcw /C /E /M "hlp\QAsystem.hpj"
+if errorlevel 1 goto :Error
+if not exist "hlp\QAsystem.hlp" goto :Error
+copy "hlp\QAsystem.hlp" .\Debug
+goto :done
+:Error
+echo hlp\QAsystem.hpj(1) : error:
+type "hlp\QAsystem.log"
+:done
+]
+Creating command line "C:\DOCUME~1\Saket\LOCALS~1\Temp\RSPD.bat"
+Creating temporary file "C:\DOCUME~1\Saket\LOCALS~1\Temp\RSPE.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/EureQA!!.pdb" /debug /machine:I386 /out:"Debug/EureQA!!.exe" /pdbtype:sept 
+".\Debug\analyze-linkage.obj"
+.\Debug\and.obj
+.\Debug\api.obj
+.\Debug\binsrch.obj
+".\Debug\build-disjuncts.obj"
+.\Debug\categoryofuser.obj
+".\Debug\command-line.obj"
+.\Debug\constituents.obj
+.\Debug\count.obj
+.\Debug\error.obj
+".\Debug\extract-links.obj"
+".\Debug\fast-match.obj"
+.\Debug\feedback.obj
+.\Debug\getopt.obj
+.\Debug\hash.obj
+.\Debug\heap.obj
+.\Debug\idiom.obj
+.\Debug\linkset.obj
+.\Debug\local_strings.obj
+.\Debug\MainFrm.obj
+.\Debug\massage.obj
+.\Debug\morph.obj
+.\Debug\OleRichEditCtrl.obj
+.\Debug\path.obj
+".\Debug\post-process.obj"
+.\Debug\pp_knowledge.obj
+.\Debug\pp_lexer.obj
+.\Debug\pp_linkset.obj
+.\Debug\preparation.obj
+".\Debug\print-util.obj"
+.\Debug\print.obj
+.\Debug\prune.obj
+.\Debug\QAsystem.obj
+.\Debug\QAsystemDoc.obj
+.\Debug\QAsystemView.obj
+.\Debug\Question.obj
+".\Debug\read-dict.obj"
+.\Debug\resources.obj
+.\Debug\search.obj
+.\Debug\seft.obj
+.\Debug\setutil.obj
+.\Debug\StdAfx.obj
+.\Debug\stem.obj
+.\Debug\stopsearch.obj
+".\Debug\string-set.obj"
+.\Debug\tokenize.obj
+.\Debug\util.obj
+.\Debug\utilities.obj
+.\Debug\wnglobal.obj
+.\Debug\wnhelp.obj
+.\Debug\wnrtl.obj
+.\Debug\wnutil.obj
+".\Debug\word-file.obj"
+".\Debug\www-parse.obj"
+.\Debug\QAsystem.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Saket\LOCALS~1\Temp\RSPE.tmp"
+Making help file...
+hlp\QAsystem.hpj(1) : error:
+Microsoft (R) Help Compiler
+HCRTF 4.03.0002
+Copyright (c) Microsoft Corp 1990 - 1995. All rights reserved.
+qasystem.hpj
+    HC5011: Error: qasystem.hpj : 
+ Cannot open the file "F:\Program Files\Microsoft Visual Studio\VC98\MFC\include\afxhelp.hm."
+<h3>Output Window</h3>
+Linking...
+QAsystemView.obj : error LNK2005: "public: char __thiscall sortedChain::search(int)const " (?search@sortedChain@@QBEDH@Z) already defined in QAsystem.obj
+QAsystemView.obj : error LNK2005: "public: class sortedChain & __thiscall sortedChain::insert(int const &)" (?insert@sortedChain@@QAEAAV1@ABH@Z) already defined in QAsystem.obj
+Debug/EureQA!!.exe : fatal error LNK1169: one or more multiply defined symbols found
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+EureQA!!.exe - 5 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
